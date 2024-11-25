@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const levelResult = document.getElementById('level-result');
     const timeResult = document.getElementById('time-result');
     const wpmResult = document.getElementById('wpm-result');
+    const accuracyResult = document.getElementById('accuracy-result');
 
     // Define texts for each difficulty level
     const texts = {
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         levelResult.textContent = 'Level: ';
         timeResult.textContent = 'Time: ';
         wpmResult.textContent = 'WPM: ';
+        accuracyResult.textContent = 'Accuracy: ';
 
         const selectedLevel = levelSelect.value.replace('level-', '');
         const randomText = texts[selectedLevel][Math.floor(Math.random() * texts[selectedLevel].length)];
@@ -47,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         userInput.focus();
         startButton.disabled = true;
         stopButton.disabled = false;
+        retryButton.disabled = true;
         startTime = new Date().getTime();
         timerInterval = setInterval(updateTimer, 1000);
     }
@@ -75,12 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const wpm = Math.round((correctWords / (timeTaken / 60))); // Calculate WPM
+        const accuracy = ((correctWords / sampleTextWords.length) * 100).toFixed(2); // Calculate accuracy
+
         levelResult.textContent = `Level: ${levelSelect.options[levelSelect.selectedIndex].text}`;
         timeResult.textContent = `Time: ${timeTaken} seconds`;
         wpmResult.textContent = `WPM: ${wpm}`;
+        accuracyResult.textContent = `Accuracy: ${accuracy}%`;
+
         userInput.disabled = true;
         startButton.disabled = false;
         stopButton.disabled = true;
+        retryButton.disabled = false;
     }
 
     // Function to reset the test
@@ -92,8 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
         levelResult.textContent = 'Level: ';
         timeResult.textContent = 'Time: ';
         wpmResult.textContent = 'WPM: ';
+        accuracyResult.textContent = 'Accuracy: ';
         startButton.disabled = false;
         stopButton.disabled = true;
+        retryButton.disabled = true;
     }
 
     // Add event listener for difficulty selection
@@ -105,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         levelResult.textContent = 'Level: ';
         timeResult.textContent = 'Time: ';
         wpmResult.textContent = 'WPM: ';
+        accuracyResult.textContent = 'Accuracy: ';
     });
 
     // Add event listeners for start, stop, and retry buttons
