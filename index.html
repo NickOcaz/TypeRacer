@@ -42,6 +42,29 @@
             <p id="accuracy-result">Accuracy: </p>
         </div>
     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+<!-- Add this inside the <body> tag, preferably at the end -->
+  <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="instructionsModalLabel">Instructions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Welcome to TypeRacer!</p>
+          <p>Select your difficulty level from the dropdown menu and hit the "Start" button to begin the test. Type the text displayed as quickly and accurately as you can. When you're done, hit the "Stop" button to see your results, including your typing speed (WPM) and accuracy. Practice regularly to improve your typing skills!</p>
+   
+          <!-- Add your instructions here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
 </html>

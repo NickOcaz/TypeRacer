@@ -123,3 +123,13 @@ document.addEventListener('DOMContentLoaded', () => {
     stopButton.addEventListener('click', stopTest);
     retryButton.addEventListener('click', resetTest);
 });
+
+
+// Add this to main.js
+document.addEventListener('DOMContentLoaded', function () {
+    const instructionsButton = document.querySelector('.btn-light.m-4.n');
+    instructionsButton.addEventListener('click', function () {
+      const instructionsModal = new bootstrap.Modal(document.getElementById('instructionsModal'));
+      instructionsModal.show();
+    });
+  });
