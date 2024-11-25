@@ -9,11 +9,21 @@
 }
 
 #main-game {
+    display: flex;
+    flex-wrap: wrap;
     width:90%;
     height: 90%;
 margin:auto;
 padding-left: 0;
+border: 5px solid #cccccc;  
 }
+
+
+#play-area {
+border: 1px solid #cccccc;  
+
+}
+
 label {
 background-color: rgb(237, 237, 237);
 border: 1px solid #cccccc;
@@ -76,7 +86,7 @@ margin-left: 0;
 }
 
 .button-group {
-    margin: 1rem;
+margin:auto;
 }
 
 
@@ -89,3 +99,13 @@ overflow: hidden;
 resize: none;
 width: 100%;    
 }
+
+@media screen and (min-width: 700px) {
+    #score-box {
+        width: 25%;
+     margin-left:1rem;
+    }
+        #play-area {
+            width: 70%;
+        }
+    }
