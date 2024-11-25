@@ -21,17 +21,44 @@
     </div>
   <div id="main-game">
  
+    <div id="play-area">
+
+    <form>
+        <label for="level">Select Difficulty</label>
+        <select name="level" id="level">
+         
+            <option value="level-easy">Easy</option>
+            <option value="level-medum">Medium</option>
+            <option value="level-hard">Hard</option>
+        </select>
+      </form>
+      <p class="game-notes">Test your typing speed by typing the text shown below:</p>
+    
+    <textarea id="text-to-copy" rows="4" cols="50" readonly>
+    The quick brown fox jumps over the lazy dog.
+    </textarea>
+
+    <textarea id="user-input" rows="4" cols="50" placeholder="Click the start button to begin the test"></textarea>
+    <div class="button-group text-center">
+        <button type="button" id="start-button" class="btn btn-light m-2" style="border: 2px solid orange;">Start</button>
+        <button type="button" id="stop-button" class="btn btn-light m-2" style="border: 2px solid orange;">Stop</button>
+        <button type="button" id="retry-button" class="btn btn-light m-2" style="border: 2px solid orange;">Retry</button>
+    </div>
+    </div>
 
 
-
-
-
+<div id="score-box">
+    <p>Results</p>
+    <p>level:</p>
+    <p>Time:</p>
+    <p>WPM:</p>
+</div>
 
 
 
   </div>
 
- sdfsdf
+
 </div>    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

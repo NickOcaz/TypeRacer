@@ -4,9 +4,88 @@
     color: white;
     text-align: center;
     padding-top: 30px;
+    margin-bottom: 30px;
 
 }
 
-.dropdown-menu {
-    background-color: #fa7122;
+#main-game {
+    width:90%;
+    height: 90%;
+margin:auto;
+padding-left: 0;
+}
+label {
+background-color: rgb(237, 237, 237);
+border: 1px solid #cccccc;
+padding: 0.5rem;
+border-radius: 5px 0 0 5px;
+font-size: 0.8rem;
+font-weight: 600;
+
+width:40%;
+margin-right:0;
+margin-left: 0;
+
+}
+
+
+#level {
+    
+    width: 40%;
+    height : 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    border-radius: 0 5px 5px 0;
+    width:55%;
+    margin-right:0;
+margin-left: 0;
+    
+}
+
+.game-notes {
+   padding-top: 0.8rem;
+  font-weight:600;
+  font-size: 1rem;
+    
+}
+
+#score-box {
+    border: 4px solid #d89e3a;
+    box-shadow: 1px 1px 5px 2px #d89e3a;
+   border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-top: 1rem;
+    text-align: center;
+    width: 100%;
+
+ 
+}
+
+#text-to-copy {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-top: 0.8rem;
+    height: fit-content;
+    overflow: hidden;
+    resize: none;
+    width: 100%;    
+    margin-bottom: 1rem;
+    
+}
+
+.button-group {
+    margin: 1rem;
+}
+
+
+#user-input {
+font-size: 1rem;
+font-weight: 600;
+padding-top: 0.8rem;
+height: fit-content;
+overflow: hidden;
+resize: none;
+width: 100%;    
 }
